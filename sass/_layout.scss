@@ -6,12 +6,13 @@
 body{
  display : flex;
  flex-direction : column;
+ font-family: "prompt", sans-serif;
 }
 
 .global {
-    display: flex;
+    display : flex;
     justify-content: center;
-    min-height: 40vh;
+    min-height : 40vh;
 }
 
 .global > section,
