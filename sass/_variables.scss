@@ -1,7 +1,19 @@
 :root {
-    --couleur-arriere-entete : #618aad;
-    --couleur-arriere-accueil : #0f0;
+    --couleur-arriere-entete : #68b3f5;
+    --couleur-arriere-accueil : rgb(42, 170, 42);
     --couleur-arriere-evenement : #045;
-    --couleur-arriere-galerie : rgb(223, 230, 42);
+    --couleur-arriere-galerie : rgb(231, 122, 20);
     --couleur-arriere-footer : #630;
+
+    // niveau de transparence
+    --transparent-h1 : .3;
+    --transparent-h2 : .3;
+    --transparent-h3 : .3;
+    --transparent-h4 : .2;
+    --transparent-h5 : .2;
+    --transparent-h6 : .2;
+    --transparent-section : .1;
+
+    // largeur des sections
+    --largeur-centrale: 900px; /* Largeur modifiée */
 }
