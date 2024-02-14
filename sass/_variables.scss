@@ -18,18 +18,18 @@
 */
 
 /* calcul des teintes */
---u1 :180; // couleur initiale
+--u1 :30; // couleur initiale
 --u2 : calc(var(--u1) + 180); // couleur complémentaire
 --u3 : calc(var(--u1) - 30); // couleur analogue gauche
 --u4 : calc(var(--u2) + 30); // couleur analogique droite
 
 /* la saturation */
 --s-arriere : 100%;
---s-avant : 90%;
+--s-avant : 50%;
 
 /* la luminosité */
---l-arriere : 30%;
---l-avant : 42%;
+--l-arriere : 50%;
+--l-avant : 10%;
 
 /* couleur arrière plan - background-color */
 --couleur-arriere-entete : hsl(var(--u1), var(--s-arriere), var(--l-arriere));

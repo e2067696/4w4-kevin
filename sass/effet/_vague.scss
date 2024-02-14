@@ -1,0 +1,19 @@
+.vague {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.vague svg {
+    position: relative;
+    display: block;
+    width: calc(124% + 1.3px);
+    height: 63px;
+}
+
+.vague .shape-fill {
+    fill: var(--couleur-arriere-accueil);
+}
