@@ -13,18 +13,45 @@ Text Domain: theme-kevin
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 :root {
-  --couleur-arriere-entete: #68b3f5;
-  --couleur-arriere-accueil: rgb(42, 170, 42);
-  --couleur-arriere-evenement: #045;
-  --couleur-arriere-galerie: rgb(231, 122, 20);
-  --couleur-arriere-footer: #630;
-  --transparent-h1: .3;
-  --transparent-h2: .3;
-  --transparent-h3: .3;
-  --transparent-h4: .2;
-  --transparent-h5: .2;
-  --transparent-h6: .2;
-  --transparent-section: .1;
+  /*
+      --couleur-arriere-entete : #68b3f5;
+      --couleur-arriere-accueil : rgb(42, 170, 42);
+      --couleur-arriere-evenement : #045;
+      --couleur-arriere-galerie : rgb(231, 122, 20);
+      --couleur-arriere-footer : #630;
+
+      // niveau de transparence
+      --transparent-h1 : .3;
+      --transparent-h2 : .3;
+      --transparent-h3 : .3;
+      --transparent-h4 : .2;
+      --transparent-h5 : .2;
+      --transparent-h6 : .2;
+      --transparent-section : .1;
+  */
+  /* calcul des teintes */
+  --u1:180;
+  --u2: calc(var(--u1) + 180);
+  --u3: calc(var(--u1) - 30);
+  --u4: calc(var(--u2) + 30);
+  /* la saturation */
+  --s-arriere: 100%;
+  --s-avant: 90%;
+  /* la luminosité */
+  --l-arriere: 30%;
+  --l-avant: 42%;
+  /* couleur arrière plan - background-color */
+  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-accueil: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-evenement: hsl(var(--u3), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-galerie: hsl(var(--u4), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-footer: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+  /* couleur avant plan - color */
+  --couleur-entete: hsl(var(--u1), var(--s-avant), var(--l-avant));
+  --couleur-accueil: hsl(var(--u2), var(--s-avant), var(--l-avant));
+  --couleur-evenement: hsl(var(--u3), var(--s-avant), var(--l-avant));
+  --couleur-galerie: hsl(var(--u4), var(--s-avant), var(--l-avant));
+  --couleur-footer: hsl(var(--u1), var(--s-avant), var(--l-avant));
   --largeur-centrale: 900px; /* Largeur modifiée */
 }
 
@@ -49,6 +76,7 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 var(--largeur-centrale);
+  border: 1px solid #aaa;
   padding: 3rem 1rem;
   background-color: rgba(255, 255, 255, var(--tranparent-section));
 }
@@ -59,22 +87,27 @@ body {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-entete);
 }
 
 #accueil {
   background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-accueil);
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
+  color: var(--couleur-evenement);
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  color: var(--couleur-galerie);
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-footer);
 }
 
 /*
@@ -82,42 +115,42 @@ https://chrisburnell.com/clamp-calculator/
 */
 h1 {
   font-size: clamp(1.5rem, -2.656rem + 12.5vw, 4.375rem);
-  color: rgba(255, 255, 255, var(--transparent-h1));
   font-weight: 600;
   font-style: normal;
+  color: var(--couleur-entete);
 }
 
 h2 {
   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
   font-weight: 500;
   font-style: normal;
-  color: rgba(58, 9, 9, var(--transparent-h2));
+  color: var(--couleur-entete);
 }
 
 h3 {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-weight: 500;
   font-style: normal;
-  color: rgba(255, 255, 255, var(--transparent-h3));
+  color: var(--couleur-entete);
 }
 
 h4 {
   font-size: clamp(1.25rem, 1.8vw, 1.75rem);
   font-weight: 500;
   font-style: normal;
-  color: rgba(125, 255, 255, var(--transparent-h4));
+  color: var(--couleur-entete);
 }
 
 h5 {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 500;
   font-style: normal;
-  color: rgba(190, 200, 255, var(--transparent-h5));
+  color: var(--couleur-entete);
 }
 
 h6 {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 500;
   font-style: normal;
-  color: rgba(1, 1, 1, var(--transparent-h6));
+  color: var(--couleur-entete);
 }/*# sourceMappingURL=style.css.map */

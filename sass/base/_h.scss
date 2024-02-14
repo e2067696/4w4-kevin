@@ -4,23 +4,25 @@ https://chrisburnell.com/clamp-calculator/
 */
 h1{
    font-size : clamp(1.5rem, -2.656rem + 12.5vw, 4.375rem);
-   color : rgba(255,255,255,var(--transparent-h1));
+ 
    font-weight: 600;
    font-style: normal;
+   color : var(--couleur-entete);
 }
 
 h2{
    font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
    font-weight: 500;
    font-style: normal;
-   color :rgba(58, 9, 9,var(--transparent-h2));
+   color : var(--couleur-entete);
 }
 h3{
    
    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
    font-weight: 500;
    font-style: normal;
-   color: rgba(255, 255, 255, var(--transparent-h3))
+   color : var(--couleur-entete);
+   
 
 }
 h4{
@@ -28,7 +30,8 @@ h4{
    font-size: clamp(1.25rem, 1.8vw, 1.75rem);
    font-weight: 500;
    font-style: normal;
-   color: rgba(125, 255, 255, var(--transparent-h4));
+   color : var(--couleur-entete);
+   
 
 }
 h5{
@@ -36,7 +39,8 @@ h5{
    font-size: clamp(1rem, 1.5vw, 1.25rem);
    font-weight: 500;
    font-style: normal;
-   color: rgba(190, 200, 255, var(--transparent-h5));
+   color : var(--couleur-entete);
+  
 
 }
 h6{
@@ -44,6 +48,7 @@ h6{
    font-size: clamp(1rem, 1.5vw, 1.25rem);
    font-weight: 500;
    font-style: normal;
-   color: rgba(1, 1, 1, var(--transparent-h6));
+   color : var(--couleur-entete);
+   
 
 }
