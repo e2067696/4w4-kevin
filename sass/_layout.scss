@@ -19,7 +19,7 @@ body{
 .global > header,
 .global > footer {
     flex : 0 1 var(--largeur-centrale);
-    border : 1px solid #aaa;
+   
     padding: 3rem 1rem;
     //background-color: rgba(0,0,0,.1);
     background-color: rgba(255,255,255,var(--tranparent-section));
@@ -38,10 +38,12 @@ body{
 #accueil{
     background-color: var(--couleur-arriere-accueil);
     color : var(--couleur-accueil);
+    
 }
 #evenement{
     background-color: var(--couleur-arriere-evenement);
     color : var(--couleur-evenement);
+    z-index: 1;
 }
 #galerie{
     background-color: var(--couleur-arriere-galerie);
@@ -52,3 +54,52 @@ body{
     background-color: var(--couleur-arriere-footer);
     color : var(--couleur-footer);
 }
+
+.accueil_blockquote_arriere{
+    background-color: var(--couleur-arriere-blockquote);
+    color : var(--couleur-avant-blockquote);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-entete);
+}
+
+.accueil_blockquote_avant{
+    background-color: var(--couleur-avant-blockquote);
+    color : var(--couleur-arriere-entete);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-entete);
+}
+
+.galerie_blockquote_arriere{
+    background-color: var(--couleur-arriere-blockquote);
+    color : var(--couleur-avant-blockquote);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-galerie);
+}
+
+.galerie_blockquote_avant{
+    background-color: var(--couleur-avant-blockquote);
+    color : var(--couleur-arriere-galerie);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-galerie);
+}
+
+.footer_blockquote_arriere{
+    background-color: var(--couleur-arriere-blockquote);
+    color : var(--couleur-avant-blockquote);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-footer);
+}
+
+.footer_blockquote_avant{
+    background-color: var(--couleur-avant-blockquote);
+    color : var(--couleur-arriere-footer);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-footer);
+}
+

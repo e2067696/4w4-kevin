@@ -32,18 +32,45 @@
 --l-avant : 10%;
 
 /* couleur arrière plan - background-color */
---couleur-arriere-entete : hsl(var(--u1), var(--s-arriere), var(--l-arriere));
---couleur-arriere-accueil : hsl(var(--u2), var(--s-arriere), var(--l-arriere));
---couleur-arriere-evenement : hsl(var(--u3), var(--s-arriere), var(--l-arriere));
---couleur-arriere-galerie : hsl(var(--u4), var(--s-arriere), var(--l-arriere));
---couleur-arriere-footer : hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+// --couleur-arriere-entete : hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+// --couleur-arriere-accueil : hsl(var(--u2), var(--s-arriere), var(--l-arriere));
+// --couleur-arriere-evenement : hsl(var(--u3), var(--s-arriere), var(--l-arriere));
+// --couleur-arriere-galerie : hsl(var(--u4), var(--s-arriere), var(--l-arriere));
+// --couleur-arriere-footer : hsl(var(--u1), var(--s-arriere), var(--l-arriere));
 
 /* couleur avant plan - color */
---couleur-entete : hsl(var(--u1), var(--s-avant), var(--l-avant));
---couleur-accueil : hsl(var(--u2), var(--s-avant), var(--l-avant));
---couleur-evenement : hsl(var(--u3), var(--s-avant), var(--l-avant));
---couleur-galerie : hsl(var(--u4), var(--s-avant), var(--l-avant));
---couleur-footer : hsl(var(--u1), var(--s-avant), var(--l-avant));
+// --couleur-entete : hsl(var(--u1), var(--s-avant), var(--l-avant));
+// --couleur-accueil : hsl(var(--u2), var(--s-avant), var(--l-avant));
+// --couleur-evenement : hsl(var(--u3), var(--s-avant), var(--l-avant));
+// --couleur-galerie : hsl(var(--u4), var(--s-avant), var(--l-avant));
+// --couleur-footer : hsl(var(--u1), var(--s-avant), var(--l-avant));
+
+// couleur monochrome
+--couleur-arriere-entete : hsl(var(--u1), 100%, 70%);
+--couleur-arriere-accueil : hsl(var(--u1), 100%, 75%);
+ --couleur-arriere-evenement : hsl(var(--u1), 100%, 80%);
+ --couleur-arriere-galerie : hsl(var(--u1), 100%, 85%);
+--couleur-arriere-footer : hsl(var(--u1), 100%, 70%);
+
+
+
+//couleur pour les 2 blockquote avec la regle 60-30-10
+--couleur-arriere-blockquote : hsl(var(--u1), 100%, 60%);
+--couleur-avant-blockquote : hsl(var(--u1), 100%, 10%);
+
+
+
+
+//--couleur-arriere-evenement : var(--couleur-arriere-accueil);
+//--couleur-arriere-galerie : var(--couleur-arriere-accueil);
+
+--couleur-entete : hsl(var(--u1), 100%, 30%);
+--couleur-accueil : hsl(var(--u1), 100%, 25%);
+--couleur-evenement : hsl(var(--u1), 100%, 20%);
+--couleur-galerie : hsl(var(--u1), 100%, 15%);
+--couleur-footer : hsl(var(--u1), 100%, 15%);
+
+
 
 // largeur des sections
 --largeur-centrale: 900px; /* Largeur modifiée */

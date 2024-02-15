@@ -41,17 +41,19 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --l-arriere: 50%;
   --l-avant: 10%;
   /* couleur arrière plan - background-color */
-  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-accueil: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-evenement: hsl(var(--u3), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-galerie: hsl(var(--u4), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-footer: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
   /* couleur avant plan - color */
-  --couleur-entete: hsl(var(--u1), var(--s-avant), var(--l-avant));
-  --couleur-accueil: hsl(var(--u2), var(--s-avant), var(--l-avant));
-  --couleur-evenement: hsl(var(--u3), var(--s-avant), var(--l-avant));
-  --couleur-galerie: hsl(var(--u4), var(--s-avant), var(--l-avant));
-  --couleur-footer: hsl(var(--u1), var(--s-avant), var(--l-avant));
+  --couleur-arriere-entete: hsl(var(--u1), 100%, 70%);
+  --couleur-arriere-accueil: hsl(var(--u1), 100%, 75%);
+  --couleur-arriere-evenement: hsl(var(--u1), 100%, 80%);
+  --couleur-arriere-galerie: hsl(var(--u1), 100%, 85%);
+  --couleur-arriere-footer: hsl(var(--u1), 100%, 70%);
+  --couleur-arriere-blockquote: hsl(var(--u1), 100%, 60%);
+  --couleur-avant-blockquote: hsl(var(--u1), 100%, 10%);
+  --couleur-entete: hsl(var(--u1), 100%, 30%);
+  --couleur-accueil: hsl(var(--u1), 100%, 25%);
+  --couleur-evenement: hsl(var(--u1), 100%, 20%);
+  --couleur-galerie: hsl(var(--u1), 100%, 15%);
+  --couleur-footer: hsl(var(--u1), 100%, 15%);
   --largeur-centrale: 900px; /* Largeur modifiée */
 }
 
@@ -76,7 +78,6 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 var(--largeur-centrale);
-  border: 1px solid #aaa;
   padding: 3rem 1rem;
   background-color: rgba(255, 255, 255, var(--tranparent-section));
 }
@@ -99,6 +100,7 @@ body {
 #evenement {
   background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
+  z-index: 1;
 }
 
 #galerie {
@@ -112,11 +114,60 @@ body {
   color: var(--couleur-footer);
 }
 
+.accueil_blockquote_arriere {
+  background-color: var(--couleur-arriere-blockquote);
+  color: var(--couleur-avant-blockquote);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid var(--couleur-arriere-entete);
+}
+
+.accueil_blockquote_avant {
+  background-color: var(--couleur-avant-blockquote);
+  color: var(--couleur-arriere-entete);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid var(--couleur-arriere-entete);
+}
+
+.galerie_blockquote_arriere {
+  background-color: var(--couleur-arriere-blockquote);
+  color: var(--couleur-avant-blockquote);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid var(--couleur-arriere-galerie);
+}
+
+.galerie_blockquote_avant {
+  background-color: var(--couleur-avant-blockquote);
+  color: var(--couleur-arriere-galerie);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid var(--couleur-arriere-galerie);
+}
+
+.footer_blockquote_arriere {
+  background-color: var(--couleur-arriere-blockquote);
+  color: var(--couleur-avant-blockquote);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid var(--couleur-arriere-footer);
+}
+
+.footer_blockquote_avant {
+  background-color: var(--couleur-avant-blockquote);
+  color: var(--couleur-arriere-footer);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid var(--couleur-arriere-footer);
+}
+
 /*
 https://chrisburnell.com/clamp-calculator/
 */
 h1 {
   font-size: clamp(1.5rem, -2.656rem + 12.5vw, 4.375rem);
+  letter-spacing: 0px;
   font-weight: 600;
   font-style: normal;
   color: var(--couleur-entete);
@@ -140,7 +191,7 @@ h4 {
   font-size: clamp(1.25rem, 1.8vw, 1.75rem);
   font-weight: 500;
   font-style: normal;
-  color: var(--couleur-galerie);
+  color: var(--couleur-entete);
 }
 
 h5 {
@@ -159,20 +210,36 @@ h6 {
 
 .vague {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  transform: rotate(180deg);
 }
 
 .vague svg {
   position: relative;
   display: block;
-  width: calc(124% + 1.3px);
-  height: 63px;
+  width: calc(100% + 1.3px);
+  height: 72px;
 }
 
 .vague .shape-fill {
   fill: var(--couleur-arriere-accueil);
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-galerie) 50%);
+}
+
+.diagonal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: aqua;
+  z-index: -1;
+  transform: skewY(-5deg);
 }/*# sourceMappingURL=style.css.map */
