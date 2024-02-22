@@ -103,3 +103,15 @@ body{
     border-left: 5px solid var(--couleur-arriere-footer);
 }
 
+// bouton clicker
+
+.bouton_clicker{
+    background-color: var(--couleur-arriere-entete);
+    color : var(--couleur-entete);
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 2px solid var(--couleur-entete);
+    cursor: pointer;
+    transition: all .3s;
+}
+
