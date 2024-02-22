@@ -8,8 +8,8 @@
     content: '';
     position: absolute;
     inset: 0;
-   
-    background-color: aqua;
+   color: var(--couleur-diagonal);
+    background-color: var(--couleur-arriere-diagonal);
     z-index: -1;
     transform: skewY(-5deg);
     

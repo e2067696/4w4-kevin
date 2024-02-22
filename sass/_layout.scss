@@ -12,19 +12,26 @@ body{
 .global {
     display : flex;
     justify-content: center;
-    min-height : 40vh;
+    min-height : 50vh;
+   
 }
 
 .global > section,
 .global > header,
 .global > footer {
     flex : 0 1 var(--largeur-centrale);
-   
+    
     padding: 3rem 1rem;
+ 
+    margin-left: 75px;
+    margin-top: 10px;
+    margin-bottom: 75px;
     //background-color: rgba(0,0,0,.1);
     background-color: rgba(255,255,255,var(--tranparent-section));
-    
-    
+}
+
+.global > header{
+   flex:1;
 }
 
 #entete, #footer{
@@ -34,6 +41,7 @@ body{
     background-color: var(--couleur-arriere-entete);
     color : var(--couleur-entete);
     position: relative;
+    min-height: 50vh;
 }
 #accueil{
     background-color: var(--couleur-arriere-accueil);
@@ -42,9 +50,34 @@ body{
 }
 #evenement{
     background-color: var(--couleur-arriere-evenement);
-    color : var(--couleur-evenement);
+    color : var(--couleur-diagonal);
     z-index: 1;
 }
+
+#evenement h2,
+#evenement h3,
+#evenement h4,
+#evenement h5,
+#evenement h6{
+    color : var(--couleur-diagonal);
+}
+
+.evenement_blockquote_arriere{
+    background-color: var(--couleur-arriere-blockquote-evenement);
+    color : var(--couleur-avant-blockquote-evenement);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-evenement);
+}
+
+.evenement_blockquote_avant{
+    background-color: var(--couleur-avant-blockquote-evenement);
+    color : var(--couleur-arriere-blockquote-evenement);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-evenement);
+}
+
 #galerie{
     background-color: var(--couleur-arriere-galerie);
     color : var(--couleur-galerie);
@@ -103,15 +136,79 @@ body{
     border-left: 5px solid var(--couleur-arriere-footer);
 }
 
-// bouton clicker
+// pour version mobile
 
-.bouton_clicker{
-    background-color: var(--couleur-arriere-entete);
-    color : var(--couleur-entete);
-    padding: 1rem;
-    margin: 1rem 0;
-    border: 2px solid var(--couleur-entete);
-    cursor: pointer;
-    transition: all .3s;
-}
+@media (max-width: 768px){
+    .global{
+        flex-direction: column;
+        align-items: center;
+    }
+    .global > section,
+    .global > header,
+    .global > footer {
+        
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .global > section,
+    .global > header,
+    .global > footer {
+        padding: 1rem;
+    }
+    .global > section,
+    .global > header,
+    .global > footer {
+        flex : 0 1 100%;
+    }
+    #entete, #footer{
+        min-height: 10vh;
+    }
+    #entete{
+        min-height: 30vh;
+    }
+    #entete{
+        background-image: url(images/wordpress-theme.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+    }
+    #footer{
+        background-image: url(images/wordpress-theme.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+    }
+    #accueil{
+        background-image: url(images/wordpress-theme.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+    }
+    #evenement{
+        background-image: url(images/wordpress-theme.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+    }
+    #galerie{
+        background-image: url(images/wordpress-theme.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+    }
+    #footer{
+        background-image: url(images/wordpress-theme.png);
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+    }
+    .accueil_blockquote_arriere{
+        background-color: var(--couleur-arriere-blockquote);
+        color : var(--couleur-avant-blockquote);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-left: 5px solid var(--couleur-arriere-entete);
+    }
+    .accueil_blockquote_avant{
+        background-color: var(--couleur-avant-blockquote);
+        color : var(--couleur-arriere-entete);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-left: 5px solid var(--couleur-arriere-entete);
+    }
+     }
 

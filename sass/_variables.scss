@@ -18,10 +18,11 @@
 */
 
 /* calcul des teintes */
+// une teinte monocrome, 2 teinte complémentaire, 3 teinte triadique a 120°
 --u1 :30; // couleur initiale
 --u2 : calc(var(--u1) + 180); // couleur complémentaire
---u3 : calc(var(--u1) - 30); // couleur analogue gauche
---u4 : calc(var(--u2) + 30); // couleur analogique droite
+--u3 : calc(var(--u1) + 120); // couleur triadique
+
 
 /* la saturation */
 --s-arriere : 100%;
@@ -53,10 +54,37 @@
 --couleur-arriere-footer : hsl(var(--u1), 100%, 70%);
 
 
+// 2 couleur complementaire background
+
+
+
+
+
 
 //couleur pour les 2 blockquote avec la regle 60-30-10
 --couleur-arriere-blockquote : hsl(var(--u1), 100%, 60%);
 --couleur-avant-blockquote : hsl(var(--u1), 100%, 10%);
+
+
+// bouton couleur background-image
+
+--bouton-couleur-1 : hsl(var(--u3), 100%, 15%);
+--bouton-couleur-2 : hsl(var(--u3), 100%, 20%);
+
+
+// bouton couleur font
+--bouton-couleur : hsl(var(--u3), 100%, 60%);
+
+
+// couleur diagonal
+
+--couleur-arriere-diagonal : hsl(var(--u2), 100%, 60%);
+--couleur-diagonal : hsl(var(--u2), 100%, 20%);
+
+// couleur blockquote dans evenement
+--couleur-arriere-blockquote-evenement : hsl(var(--u2), 100%, 10%);
+--couleur-avant-blockquote-evenement : hsl(var(--u2), 100%, 70%);
+
 
 
 
@@ -73,5 +101,5 @@
 
 
 // largeur des sections
---largeur-centrale: 900px; /* Largeur modifiée */
+--largeur-centrale: 1100px; /* Largeur modifiée */
 }
