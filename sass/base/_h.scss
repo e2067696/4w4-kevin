@@ -18,7 +18,7 @@ h2{
 }
 h3{
    
-   font-size: clamp(0.625rem, -0.278rem + 2.222vw, 1.25rem);
+   font-size: clamp(0.625rem, -0.278rem + 10vw, 1.25rem);
    font-weight: 500;
    font-style: normal;
    color : var(--couleur-entete);
@@ -27,7 +27,7 @@ h3{
 }
 h4{
 
-   font-size: clamp(0.5rem, -0.403rem + 2.222vw, 1.125rem);
+   font-size: clamp(0.5rem, -0.403rem + 10vw, 1.125rem);
    font-weight: 500;
    font-style: normal;
    color : var(--couleur-entete);
@@ -36,7 +36,7 @@ h4{
 }
 h5{
 
-   font-size: clamp(0.5rem, -0.403rem + 2.222vw, 1.125rem);
+   font-size: clamp(0.5rem, -0.403rem + 10vw, 1.125rem);
    font-weight: 500;
    font-style: normal;
    color : var(--couleur-entete);
@@ -45,7 +45,7 @@ h5{
 }
 h6{
 
-   font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+   font-size: clamp(0.5rem, -0.403rem + 10vw, 1.125rem);
    font-weight: 500;
    font-style: normal;
    color : var(--couleur-entete);
@@ -55,6 +55,7 @@ h6{
 
 span{
   display: block;
+  
   
 }
 

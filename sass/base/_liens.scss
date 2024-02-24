@@ -9,3 +9,7 @@ a:hover {
 a:visited {
     color : var(--couleur-lien-visited);
 }
+
+:hover:visited :focus{
+    color : var(--couleur-lien-visited-focus);
+}

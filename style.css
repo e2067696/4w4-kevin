@@ -48,13 +48,17 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-arriere-footer: hsl(var(--u1), 100%, 70%);
   --couleur-arriere-blockquote: hsl(var(--u1), 100%, 60%);
   --couleur-avant-blockquote: hsl(var(--u1), 100%, 10%);
-  --bouton-couleur-1: hsl(var(--u3), 100%, 15%);
-  --bouton-couleur-2: hsl(var(--u3), 100%, 20%);
+  --bouton-couleur-1: hsl(var(--u2), 100%, 15%);
+  --bouton-couleur-2: hsl(var(--u2), 100%, 20%);
   --bouton-couleur: hsl(var(--u3), 100%, 60%);
   --couleur-arriere-diagonal: hsl(var(--u2), 100%, 60%);
   --couleur-diagonal: hsl(var(--u2), 100%, 20%);
   --couleur-arriere-blockquote-evenement: hsl(var(--u2), 100%, 10%);
   --couleur-avant-blockquote-evenement: hsl(var(--u2), 100%, 70%);
+  --couleur-lien: hsl(var(--u1), 100%, 10%);
+  --couleur-lien-hover: hsl(var(--u1), 100%, 30%);
+  --couleur-lien-visited: hsl(var(--u1), 100%, 40%);
+  --couleur-lien-visited-focus: hsl(var(--u1), 100%, 10%);
   --couleur-entete: hsl(var(--u1), 100%, 30%);
   --couleur-accueil: hsl(var(--u1), 100%, 25%);
   --couleur-evenement: hsl(var(--u1), 100%, 20%);
@@ -85,14 +89,9 @@ body {
 .global > footer {
   flex: 0 1 var(--largeur-centrale);
   padding: 3rem 1rem;
-  margin-left: 75px;
   margin-top: 10px;
   margin-bottom: 75px;
   background-color: rgba(255, 255, 255, var(--tranparent-section));
-}
-
-.global > header {
-  flex: 1;
 }
 
 #entete, #footer {
@@ -104,6 +103,19 @@ body {
   color: var(--couleur-entete);
   position: relative;
   min-height: 50vh;
+}
+
+#entete nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#entete nav a {
+  margin-right: 20px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: clamp(0.9rem, -2.156rem + 6vw, 1.75rem);
 }
 
 #accueil {
@@ -201,61 +213,70 @@ body {
 }
 
 @media (max-width: 768px) {
-  .global {
+  .global > section,
+  .global > header,
+  .global > footer {
+    display: flex;
     flex-direction: column;
+    align-content: space-around;
     align-items: center;
+    flex: 0 1 var(--largeur-centrale);
+    justify-content: space-between;
+    padding: 3rem 1rem;
+    margin-top: 10px;
+    margin-bottom: 75px;
+    background-color: rgba(255, 255, 255, var(--tranparent-section));
   }
-  .global > section,
-  .global > header,
-  .global > footer {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .global > section,
-  .global > header,
-  .global > footer {
-    padding: 1rem;
-  }
-  .global > section,
-  .global > header,
-  .global > footer {
-    flex: 0 1 100%;
+  .global > header {
+    flex: 1;
   }
   #entete, #footer {
-    min-height: 10vh;
+    min-height: 20vh;
   }
   #entete {
-    min-height: 30vh;
-  }
-  #entete {
-    background-image: url(images/wordpress-theme.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-  }
-  #footer {
-    background-image: url(images/wordpress-theme.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
+    background-color: var(--couleur-arriere-entete);
+    color: var(--couleur-entete);
+    position: relative;
+    min-height: 50vh;
   }
   #accueil {
-    background-image: url(images/wordpress-theme.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
+    background-color: var(--couleur-arriere-accueil);
+    color: var(--couleur-accueil);
   }
   #evenement {
-    background-image: url(images/wordpress-theme.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
+    background-color: var(--couleur-arriere-evenement);
+    color: var(--couleur-diagonal);
+    z-index: 1;
+  }
+  #evenement h2,
+  #evenement h3,
+  #evenement h4,
+  #evenement h5,
+  #evenement h6 {
+    color: var(--couleur-diagonal);
+  }
+  .evenement_blockquote_arriere {
+    background-color: var(--couleur-arriere-blockquote-evenement);
+    color: var(--couleur-avant-blockquote-evenement);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-evenement);
+  }
+  .evenement_blockquote_avant {
+    background-color: var(--couleur-avant-blockquote-evenement);
+    color: var(--couleur-arriere-blockquote-evenement);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-evenement);
   }
   #galerie {
-    background-image: url(images/wordpress-theme.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
+    background-color: var(--couleur-arriere-galerie);
+    color: var(--couleur-galerie);
+    position: relative;
   }
   #footer {
-    background-image: url(images/wordpress-theme.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
+    background-color: var(--couleur-arriere-footer);
+    color: var(--couleur-footer);
   }
   .accueil_blockquote_arriere {
     background-color: var(--couleur-arriere-blockquote);
@@ -270,6 +291,34 @@ body {
     padding: 1rem;
     margin: 1rem 0;
     border-left: 5px solid var(--couleur-arriere-entete);
+  }
+  .galerie_blockquote_arriere {
+    background-color: var(--couleur-arriere-blockquote);
+    color: var(--couleur-avant-blockquote);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-galerie);
+  }
+  .galerie_blockquote_avant {
+    background-color: var(--couleur-avant-blockquote);
+    color: var(--couleur-arriere-galerie);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-galerie);
+  }
+  .footer_blockquote_arriere {
+    background-color: var(--couleur-arriere-blockquote);
+    color: var(--couleur-avant-blockquote);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-footer);
+  }
+  .footer_blockquote_avant {
+    background-color: var(--couleur-avant-blockquote);
+    color: var(--couleur-arriere-footer);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid var(--couleur-arriere-footer);
   }
 }
 .entete_header {
@@ -310,28 +359,28 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(0.625rem, -0.278rem + 2.222vw, 1.25rem);
+  font-size: clamp(0.625rem, -0.278rem + 10vw, 1.25rem);
   font-weight: 500;
   font-style: normal;
   color: var(--couleur-entete);
 }
 
 h4 {
-  font-size: clamp(0.5rem, -0.403rem + 2.222vw, 1.125rem);
+  font-size: clamp(0.5rem, -0.403rem + 10vw, 1.125rem);
   font-weight: 500;
   font-style: normal;
   color: var(--couleur-entete);
 }
 
 h5 {
-  font-size: clamp(0.5rem, -0.403rem + 2.222vw, 1.125rem);
+  font-size: clamp(0.5rem, -0.403rem + 10vw, 1.125rem);
   font-weight: 500;
   font-style: normal;
   color: var(--couleur-entete);
 }
 
 h6 {
-  font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
+  font-size: clamp(0.5rem, -0.403rem + 10vw, 1.125rem);
   font-weight: 500;
   font-style: normal;
   color: var(--couleur-entete);
@@ -351,6 +400,10 @@ a:hover {
 
 a:visited {
   color: var(--couleur-lien-visited);
+}
+
+:hover:visited :focus {
+  color: var(--couleur-lien-visited-focus);
 }
 
 .vague {

@@ -68,8 +68,8 @@
 
 // bouton couleur background-image
 
---bouton-couleur-1 : hsl(var(--u3), 100%, 15%);
---bouton-couleur-2 : hsl(var(--u3), 100%, 20%);
+--bouton-couleur-1 : hsl(var(--u2), 100%, 15%);
+--bouton-couleur-2 : hsl(var(--u2), 100%, 20%);
 
 
 // bouton couleur font
@@ -84,6 +84,15 @@
 // couleur blockquote dans evenement
 --couleur-arriere-blockquote-evenement : hsl(var(--u2), 100%, 10%);
 --couleur-avant-blockquote-evenement : hsl(var(--u2), 100%, 70%);
+
+
+--couleur-lien : hsl(var(--u1), 100%, 10%);
+
+--couleur-lien-hover : hsl(var(--u1), 100%, 30%);
+
+--couleur-lien-visited : hsl(var(--u1), 100%, 40%);
+
+--couleur-lien-visited-focus : hsl(var(--u1), 100%, 10%);
 
 
 
