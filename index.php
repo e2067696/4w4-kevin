@@ -61,11 +61,22 @@
                 if (have_posts()): 
                     while (have_posts()): the_post();
                     $titre = get_the_title();
+                    
+
                     $sigle = substr($titre, 0, 7);
+                    // trouver la $duree du cours dans le titre, trouver la parathese ouvrante et fermente
+                    $pos1 = strpos($titre, "(");
+                    $pos2 = strpos($titre, ")");
+                    $duree = substr($titre, $pos1, $pos2-$pos1+1);
+
+                    // Garder le titre sans le sigle et la duree, le titre se trouve entre le sigle et la duree
+                    $titre = substr($titre, 7, $pos1-8);
+
                     ?>
                     <div class="carte">
                         <p><?php echo $sigle;?></p>
-                        <h3><?php echo $titre; ?></h3>
+                        <h4><?php echo $titre; ?></h4>
+                        <p><?php echo $duree;?></p>
                         <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
                         </div>
                     <?php endwhile;?>

@@ -366,7 +366,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(0.6rem, -0.403rem + 10vw, 1.25rem);
+  font-size: clamp(0.5rem, -0.403rem + 10vw, 1.25rem);
   font-weight: 500;
   font-style: normal;
   color: var(--couleur-entete);
