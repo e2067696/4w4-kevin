@@ -1,15 +1,38 @@
 .cours{
     display: flex;
     flex-wrap:wrap;
+    padding-top: 1rem;
     justify-content: flex-start;
     gap: 1rem;
    
 }
 
+.cours p {
+    font-size: clamp(0.625rem, -0.098rem + 1.506vw, 0.938rem);
+    
+}
+
 .carte{
     display: flex;
     flex-direction: column;
+    padding: 1rem;
     justify-content: space-between;
-    flex: 0 1 20%;
+    flex: 0 1 25%;
     border: 1px solid #aaa;
+}
+
+.cours h3{
+   color : var(--couleur-h-carte);
+}
+
+// l'adapter pour les taille d'ecran plus petite
+
+@media (max-width: 768px){
+   
+  
+    .carte{
+        flex: 1 1 40%;
+    }
+
+  
 }

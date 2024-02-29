@@ -74,10 +74,10 @@
 
                     ?>
                     <div class="carte">
-                        <p><?php echo $sigle;?></p>
-                        <h4><?php echo $titre; ?></h4>
-                        <p><?php echo $duree;?></p>
-                        <p><?php echo wp_trim_words(get_the_content(),20); ?></p>
+                        <h4><?php echo $sigle;?></h4>
+
+                        <h3><?php echo $titre; ?> <?php echo $duree;?></h3>
+                        <p><?php echo wp_trim_words(get_the_content(),30); ?></p>
                         </div>
                     <?php endwhile;?>
                  <?php endif; ?>
@@ -125,7 +125,7 @@
             <h6> ahahahahaha (h6)</h6>
             <blockquote class="footer_blockquote_arriere">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut consequatur quaerat asperiores tempore velit itaque voluptate delectus a sapiente exercitationem quas molestias repudiandae earum, quis rem quod dolores beatae provident!</blockquote>
             <blockquote class="footer_blockquote_avant">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita atque soluta ullam accusamus incidunt voluptas assumenda delectus et, ab quae nam a cum facere quidem sed, aperiam repellat eum fuga?</blockquote>
-
+            
         </footer>
     </div>
 </body>
