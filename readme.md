@@ -31,6 +31,7 @@
 - _cours.scss modifaction de la couleur h3 dans la div.cours, et le ajustement pour l'écran pour les petit écran.
 - _cours.scss modification de la taille p 
 - index.php j'ai ajouter la liste de cours et ajouter des subtr pour separer le titre,sigle,duree
+- ajout d'un background color au carte avec une nouvelle variable
 
 ## Ma github-page :
 - https://e2067696.github.io/4w4-kevin/
