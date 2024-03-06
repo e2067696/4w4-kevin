@@ -462,17 +462,11 @@ a:visited {
   flex-direction: column;
   padding: 1rem;
   background-color: var(--couleur-fond-carte);
-  justify-content: space-between;
-  flex: 0 1 25%;
+  justify-content: center;
+  flex: 1 0 250px;
   border: 1px solid #aaa;
 }
 
 .cours h3 {
   color: var(--couleur-h-carte);
-}
-
-@media (max-width: 768px) {
-  .carte {
-    flex: 1 1 40%;
-  }
 }/*# sourceMappingURL=style.css.map */

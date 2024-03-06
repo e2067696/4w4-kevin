@@ -17,23 +17,11 @@
     flex-direction: column;
     padding: 1rem;
     background-color: var(--couleur-fond-carte);
-    justify-content: space-between;
-    flex: 0 1 25%;
+    justify-content: center;
+    flex: 1 0 calc(1000px / 4);
     border: 1px solid #aaa;
 }
 
 .cours h3{
    color : var(--couleur-h-carte);
-}
-
-// l'adapter pour les taille d'ecran plus petite
-
-@media (max-width: 768px){
-   
-  
-    .carte{
-        flex: 1 1 40%;
-    }
-
-  
 }

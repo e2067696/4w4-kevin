@@ -62,15 +62,22 @@
                     while (have_posts()): the_post();
                     $titre = get_the_title();
                     
-
+                    // trouver le sigle du cours dans le titre, trouver les 7 premiers caracteres
                     $sigle = substr($titre, 0, 7);
-                    // trouver la $duree du cours dans le titre, trouver la parathese ouvrante et fermente
-                    $pos1 = strpos($titre, "(");
-                    $pos2 = strpos($titre, ")");
-                    $duree = substr($titre, $pos1, $pos2-$pos1+1);
 
-                    // Garder le titre sans le sigle et la duree, le titre se trouve entre le sigle et la duree
-                    $titre = substr($titre, 7, $pos1-8);
+                    //methode 1  trop long
+                    // $pos1 = strpos($titre, "(");
+                    // $pos2 = strpos($titre, ")");
+                    // $duree = substr($titre, $pos1, $pos2-$pos1+1);
+                    // $titre = substr($titre, 7, $pos1-8);
+
+                    //methode 2 plus court
+                    $pos1 = strpos($titre, "(");
+                    $duree = substr($titre, $pos1);
+                    $titre = substr($titre, 7, $pos1-7);
+
+                
+                   
 
                     ?>
                     <div class="carte">
