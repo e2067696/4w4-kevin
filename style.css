@@ -64,9 +64,11 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-evenement: hsl(var(--u1), 100%, 20%);
   --couleur-galerie: hsl(var(--u1), 100%, 15%);
   --couleur-footer: hsl(var(--u1), 100%, 15%);
-  --couleur-fond-carte: hsl(var(--u1), 100%, 90%);
   --couleur-h-carte: hsl(var(--u1), 100%, 20%);
   --largeur-centrale: 1100px; /* Largeur modifiée */
+}
+:root .carte {
+  --_couleur-fond-carte: hsl(var(--u1), 100%, 90%);
 }
 
 * {
@@ -83,12 +85,13 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 50vh;
+  align-items: center;
+  min-height: 20vh;
 }
 
 .global > section,
 .global > header,
-.global > footer {
+.global > footer .global > .entete_menu {
   flex: 0 1 var(--largeur-centrale);
   padding: 3rem 1rem;
   margin-top: 10px;
@@ -330,6 +333,7 @@ body {
   justify-content: center;
 }
 
+/*  Base  */
 button {
   font-size: clamp(1.125rem, 0.5rem + 2vw, 1.875rem);
   padding: 12px 24px;
@@ -408,6 +412,7 @@ a:visited {
   color: var(--couleur-lien-visited-focus);
 }
 
+/*  Effet  */
 .vague {
   position: absolute;
   bottom: 0;
@@ -445,6 +450,7 @@ a:visited {
   transform: skewY(-5deg);
 }
 
+/*  Composant  */
 .cours {
   display: flex;
   flex-wrap: wrap;
@@ -461,7 +467,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: var(--couleur-fond-carte);
+  background-color: var(--_couleur-fond-carte);
   justify-content: center;
   flex: 1 0 250px;
   border: 1px solid #aaa;
@@ -469,4 +475,32 @@ a:visited {
 
 .cours h3 {
   color: var(--couleur-h-carte);
+}
+
+/* <nav class="menu-principal-container">
+<ul id="menu-principal" class="menu"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-32"><a href="http://localhost:8080/4w4kevin/2020/10/07/582-6n3-stage-285h/" aria-current="page">582-6N3 Stage (285h)</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost:8080/4w4kevin/2020/10/07/582-5w5-projet-web-en-equipe-105h/">582-5W5	Projet Web en équipe (105h)</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost:8080/4w4kevin/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication et dynamique en équipe</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="#accueil">Accueil</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a href="#footer">Pied de page</a></li>
+</ul>
+</nav> */
+/* 
+Feuille de style du menu principal 
+*/
+.menu-principal-container {
+  background-color: black;
+  border: 1px solid #aaa;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-item {
+  flex: 1 0 50px;
 }/*# sourceMappingURL=style.css.map */

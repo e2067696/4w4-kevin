@@ -11,50 +11,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
-</header>
 <body>
+<div id="menu" class="global">
+        <div class="entete__menu">
+            <?php wp_nav_menu($arg=array("container" => "nav")); ?>
+        </div>
+    </div>
     
-    <div id="entete" class="global">
-        <header class="entete_header">
-            <nav>
+<div id="entete" class="global">
+    <section class="entete_header">
+        <nav>
               
-                    <a href="#accueil">Accueil</a>
-                    <a href="#evenement">Evenement</a>
-                    <a href="#galerie">Galerie</a>
-                    <a href="#footer">Footer</a>
-                
-            </nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#evenement">Evenement</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#footer">Footer</a>
+        </nav>
             <h1>Thème du groupe #1 (h1) </h1>
             <h2>4W4-conception d'interface <span>et développement web (h2)</span></h2>
             <h3> TIM-college de maisonneuve (h3)</h3>
             <button>Événement</button>
-        </header>
+    </section>
         
-        <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-accueil);"></path>
-            </svg>
-        </div>
-        
+    <div class="vague">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-accueil);"></path>
+        </svg>
     </div>
+        
+</div>
     
-    <div id="accueil" class="global">
-        <section class="accueil_section">
-            <h2>Accueil (h2) </h2>
-            <h3> ahahahahaha (h3)</h3>
-            <h4> ahahahahaha (h4)</h4>
-            <h5> ahahahahaha (h5)</h5>
-            <h6> ahahahahaha (h6)</h6>
-            <div class="cours">
-            <?php 
+ <div id="accueil" class="global">
+    <section class="accueil_section">
+        <h2>Accueil (h2) </h2>
+        <h3> ahahahahaha (h3)</h3>
+         <h4> ahahahahaha (h4)</h4>
+        <h5> ahahahahaha (h5)</h5>
+        <h6> ahahahahaha (h6)</h6>
+        <div class="cours">
+        <?php 
 
-                // methode 1 mais qu'on utilise pas
-                /* if (have_posts()) {
-                    while (have_posts()) {
-                        the_post();
-                        the_title("<h3>", "</h3>");
-                        echo wp_trim_words(get_the_content(),30);
-                    }
+            // methode 1 mais qu'on utilise pas
+            /* if (have_posts()) {
+                while (have_posts()) {
+                    the_post();
+                     the_title("<h3>", "</h3>");
+                    echo wp_trim_words(get_the_content(),30);
+                   }
                 } */
 
                 // methode 2 qu'on utilise
