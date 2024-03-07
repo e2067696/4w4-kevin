@@ -48,6 +48,7 @@
 
 // couleur monochrome
 --couleur-arriere-entete : hsl(var(--u1), 100%, 70%);
+--couleur-arriere-menu : hsl(var(--u1), 100%, 30%);
 --couleur-arriere-accueil : hsl(var(--u1), 100%, 75%);
  --couleur-arriere-evenement : hsl(var(--u1), 100%, 80%);
  --couleur-arriere-galerie : hsl(var(--u1), 100%, 85%);
@@ -111,6 +112,15 @@
 .carte{
     --_couleur-fond-carte : hsl(var(--u1), 100%, 90%);
 }
+
+#entete{
+    --_couleur-arriere-vague : var(--couleur-arriere-accueil);
+}
+
+#galerie{
+    --_couleur-arriere-vague : var(--couleur-arriere-footer);
+}
+
 // couleur pour les h dans carte
 --couleur-h-carte : hsl(var(--u1), 100%, 20%);
 

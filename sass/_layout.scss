@@ -13,14 +13,13 @@ body{
     display : flex;
     justify-content: center;
     align-items: center;
-    min-height: 20vh;
+    
    
 }
 
 .global > section,
 .global > header,
 .global > footer
-.global > .entete_menu
  {
     flex : 0 1 var(--largeur-centrale);
     
@@ -35,6 +34,15 @@ body{
 
 
 
+#menu_entete{
+    background-color: var(--couleur-arriere-menu);
+    min-height: 10vh;
+   
+}
+
+
+
+
 #entete, #footer{
     min-height: 20vh;
 }
@@ -42,14 +50,15 @@ body{
     background-color: var(--couleur-arriere-entete);
     color : var(--couleur-entete);
     position: relative;
-    min-height: 50vh;
+    min-height: 40vh;
 }
 
-#entete nav{
+/* #entete nav{
  display: flex;
  align-items: center;
     justify-content: center;
-}
+    flex-wrap: wrap;
+} */
 
 #entete nav a{
 margin-right: 20px;
@@ -156,7 +165,7 @@ font-size: clamp(0.9rem, -2.156rem + 6vw, 1.75rem);
 
 // pour version mobile
 
-@media (max-width: 768px){
+ @media (max-width: 768px){
 
     
     .global > section,
@@ -287,3 +296,4 @@ font-size: clamp(0.9rem, -2.156rem + 6vw, 1.75rem);
 
      }
 
+ 

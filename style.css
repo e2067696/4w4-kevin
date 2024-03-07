@@ -42,6 +42,7 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   /* couleur arrière plan - background-color */
   /* couleur avant plan - color */
   --couleur-arriere-entete: hsl(var(--u1), 100%, 70%);
+  --couleur-arriere-menu: hsl(var(--u1), 100%, 30%);
   --couleur-arriere-accueil: hsl(var(--u1), 100%, 75%);
   --couleur-arriere-evenement: hsl(var(--u1), 100%, 80%);
   --couleur-arriere-galerie: hsl(var(--u1), 100%, 85%);
@@ -70,6 +71,12 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 :root .carte {
   --_couleur-fond-carte: hsl(var(--u1), 100%, 90%);
 }
+:root #entete {
+  --_couleur-arriere-vague: var(--couleur-arriere-accueil);
+}
+:root #galerie {
+  --_couleur-arriere-vague: var(--couleur-arriere-footer);
+}
 
 * {
   margin: 0;
@@ -86,17 +93,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 20vh;
 }
 
 .global > section,
 .global > header,
-.global > footer .global > .entete_menu {
+.global > footer {
   flex: 0 1 var(--largeur-centrale);
   padding: 3rem 1rem;
   margin-top: 10px;
   margin-bottom: 75px;
   background-color: rgba(255, 255, 255, var(--tranparent-section));
+}
+
+#menu_entete {
+  background-color: var(--couleur-arriere-menu);
+  min-height: 10vh;
 }
 
 #entete, #footer {
@@ -107,15 +118,15 @@ body {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
   position: relative;
-  min-height: 50vh;
+  min-height: 40vh;
 }
 
-#entete nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* #entete nav{
+ display: flex;
+ align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+} */
 #entete nav a {
   margin-right: 20px;
   padding: 10px;
@@ -430,8 +441,8 @@ a:visited {
   height: 72px;
 }
 
-.vague .shape-fill {
-  fill: var(--couleur-arriere-accueil);
+.vague .remplissage {
+  fill: var(--_couleur-arriere-vague);
 }
 
 .diagonal {
@@ -489,18 +500,46 @@ a:visited {
 Feuille de style du menu principal 
 */
 .menu-principal-container {
-  background-color: black;
-  border: 1px solid #aaa;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .menu {
-  display: flex;
-  list-style-type: none;
-  justify-content: space-around;
-  align-items: center;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  transform: translateX(200%);
+}
+@media (min-width: 700px) {
+  .menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    transform: translateX(0);
+  }
 }
 
 .menu-item {
   flex: 1 0 50px;
+}
+
+.menu-item a {
+  color: white;
+}
+
+#burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}
+
+#chk_burger:checked ~ .menu {
+  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */
