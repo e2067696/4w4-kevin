@@ -245,6 +245,8 @@ body {
   }
   .global > header {
     flex: 1;
+    align-items: flex-start; /* Aligner les éléments verticalement au début */
+    justify-content: flex-start; /* Aligner les éléments horizontalement au début */
   }
   #entete, #footer {
     min-height: 20vh;
@@ -500,46 +502,62 @@ a:visited {
 Feuille de style du menu principal 
 */
 .menu-principal-container {
-  display: flex;
-  justify-content: center;
-}
-
-.menu {
   position: absolute;
-  display: none;
-  flex-direction: column;
-  transform: translateX(200%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(to bottom, black, red, blue);
+  opacity: 0.9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateX(-120%);
+  z-index: 1;
 }
 @media (min-width: 700px) {
-  .menu {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
+  .menu-principal-container {
     transform: translateX(0);
+    position: static;
   }
 }
-
-.menu-item {
-  flex: 1 0 50px;
-}
-
-.menu-item a {
-  color: white;
-}
-
-#burger {
-  display: block;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.menu-principal-container .menu {
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 700px) {
-  #burger {
+  .menu-principal-container .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.menu-principal-container .menu-item {
+  list-style-type: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+}
+.menu-principal-container .menu-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: "Teko", sans-serif;
+}
+.menu-principal-container #burger {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#chk_burger {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  #burger > svg:nth-child(1) {
     display: none;
   }
 }
 
-#chk_burger:checked ~ .menu {
-  transform: translateY(0);
+#chk_burger:checked ~ .menu-principal-container {
+  transform: translateX(75%);
 }/*# sourceMappingURL=style.css.map */

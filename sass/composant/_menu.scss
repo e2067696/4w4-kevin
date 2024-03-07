@@ -11,50 +11,73 @@
 Feuille de style du menu principal 
 */
 
-.menu-principal-container { // nav
-
-    display: flex;
-    justify-content: center;
-
-}
-
-.menu{ // ul
-     position: absolute;
-    display: none;
-    flex-direction: column;
-    transform: translateX(200%);
-    @media (min-width: 700px){
-         position: static;
-        display: flex;
-        flex-direction: row;
-       list-style-type: none;
-       transform: translateX(0);
-    }
-}
-
-.menu-item{ // li
-    flex:  1 0 50px;
-
-  
-  
-}
-
-.menu-item a{ // a
-    color: white;
-}
-
-#burger{
-
-    display: block;
+.menu-principal-container { //Nav
     position: absolute;
-    top: 10px;
-    right: 10px;
-    @media (min-width: 700px){
-        display: none;
+    background: rgb(0,0,0);
+    background: linear-gradient(to bottom, black, red, blue); opacity: 0.9; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    // border: 5px solid whitesmoke;
+    transform: translateX(-120%);
+  
+   
+    z-index: 1;
+    // transition: translateY 1s;
+ 
+    @media (min-width: 700px) {
+        transform: translateX(0);
+        position: static;
     }
+    .menu { //ul
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 700px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+       
+    }
+   
+    .menu-item { //li
+   
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+   
+    }
+   
+    .menu-item a { //li a
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-family: 'Teko', sans-serif;
+    }
+    // Gestion label burger l'image svg dans un label
+   
+ 
+    #burger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+       
+    }
+ 
 }
-
-#chk_burger:checked ~ .menu{
-
-    transform : translateY(0);
+#chk_burger{
+        display: none;
+}
+#burger > svg:nth-child(1) {
+    @media (min-width: 700px) {
+     display: none;  
+    }
+   
+  }
+ 
+ 
+#chk_burger:checked ~ .menu-principal-container {
+    transform: translateX(75%);
+   
+   
 }

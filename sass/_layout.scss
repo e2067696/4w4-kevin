@@ -40,9 +40,6 @@ body{
    
 }
 
-
-
-
 #entete, #footer{
     min-height: 20vh;
 }
@@ -186,10 +183,11 @@ font-size: clamp(0.9rem, -2.156rem + 6vw, 1.75rem);
         background-color: rgba(255,255,255,var(--tranparent-section));
     }
     
-    .global > header{
+  
+    .global > header {
         flex: 1;
-        
-       
+        align-items: flex-start; /* Aligner les éléments verticalement au début */
+        justify-content: flex-start; /* Aligner les éléments horizontalement au début */
     }
     
     #entete, #footer{
