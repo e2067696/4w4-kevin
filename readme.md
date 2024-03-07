@@ -1,30 +1,29 @@
-# Labo #3
-## Creation d'un site WP.
+# Labo #4
+### Créer une nouvelle branche « labo4 »
+- Ajouter un menu permettant d'accéder
+  - à vos cinq cours préférés
+  - à chacune des sections de la page
 
-- Adaptation du thème de exercice #1
-- Création du modèle index.php
-- Création de la branche labo3
-- minimum 3 commits
-- Un Readme.md qui contiendra:
-    - Le nom de l'auteur
-    - L'objectif du labo3
-    - Les réalisations
-    - Un lien vers la github-page
-- Décomposé le titre de chaque cours:
-    - sigle du cours ex: 582-4W4
-    - le titre du cours ex: Conception d'interface et développement Web
-    - la durée du cours : 90h
-- Garder les 30 premiers mots de la description du cours.
+### Le menu doit être formatter en utilisant 
+  - composant/_menu.scss
+  - Le menu doit être adaptatif et être amovible en version mobile.
+    - Créer le template header.php qui contiendra la structure d'entête de la page qui sera reproduite dans chacun des modules du thème
 
-### La section galerie affichera la liste des cours du TIM en 4 colonnes.
-- La liste devra s'apdater aux différentes largeurs de fenêtre.
-- Chacune des cartes de cours sera formate en utilisant les flex box
+### Création d'un template-part (gabarit)
+    - Créer un template-part qui permettra d'afficher les vagues.
 
 ### Barème de correction
-- Organistion du code, 3 commits minimum (point)
-- Résultat sous forme de github page (.5 point)
-- Design global de la page (.5 point)
+- intégration de chacun des éléments précédents de façon structuré. (1 point)
+- Création d'une github-page a partir de index.htm
+- Création du readme.md avec :
+- Le nom de l'auteur
+- Un résume des étapes du labo-4
+- Un lien vers votre "github-page"
+- production de 5 commits 
 
+### Création d'une github-page à partir de index.htm
+- production de 5 commits
+- Design général de la page (1 point)
 
 ## Auteur Kevin Bacon
 ### Les realisation
