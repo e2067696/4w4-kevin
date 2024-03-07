@@ -19,7 +19,8 @@
 - Le nom de l'auteur
 - Un résume des étapes du labo-4
 - Un lien vers votre "github-page"
-- production de 5 commits 
+- production de 5 commits
+- Design général de la page (1 point)
 
 ### Création d'une github-page à partir de index.htm
 - production de 5 commits
