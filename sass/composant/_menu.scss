@@ -13,7 +13,6 @@ Feuille de style du menu principal
 
 .menu-principal-container { //Nav
     position: absolute;
-    background: rgb(0,0,0);
     background: linear-gradient(to bottom, black, red, blue); opacity: 0.9; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     // border: 5px solid whitesmoke;
     transform: translateX(-120%);
@@ -24,6 +23,7 @@ Feuille de style du menu principal
  
     @media (min-width: 700px) {
         transform: translateX(0);
+        background: orange;
         position: static;
     }
     .menu { //ul
