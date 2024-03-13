@@ -13,7 +13,7 @@
 
 <body>
     <?php get_header(); ?>
-            <h1>index.php</h1>
+        <h1>front-page.php</h1>
     <div id="entete" class="global">
     <section class="entete_header">
             <h1>Thème du groupe #1 (h1) </h1>
@@ -53,7 +53,7 @@
                     $titre = get_the_title();
                     
                     // trouver le sigle du cours dans le titre, trouver les 7 premiers caracteres
-                    
+                    $sigle = substr($titre, 0, 7);
 
                     //methode 1  trop long
                     // $pos1 = strpos($titre, "(");
@@ -61,12 +61,19 @@
                     // $duree = substr($titre, $pos1, $pos2-$pos1+1);
                     // $titre = substr($titre, 7, $pos1-8);
 
+                    //methode 2 plus court
+                    $pos1 = strpos($titre, "(");
+                    $duree = substr($titre, $pos1);
+                    $titre = substr($titre, 7, $pos1-7);
+
+                
+                   
 
                     ?>
                     <div class="carte">
-                       
+                        <h4><?php echo $sigle;?></h4>
 
-                        <h3><?php echo $titre; ?></h3>
+                        <h3><?php echo $titre; ?> <?php echo $duree;?></h3>
                         <p><?php echo wp_trim_words(get_the_content(),30); ?></p>
                         </div>
                     <?php endwhile;?>
