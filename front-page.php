@@ -55,26 +55,26 @@
                     // trouver le sigle du cours dans le titre, trouver les 7 premiers caracteres
                     $sigle = substr($titre, 0, 7);
 
-                    //methode 1  trop long
+                    //methode 1  trop long labo4
                     // $pos1 = strpos($titre, "(");
                     // $pos2 = strpos($titre, ")");
                     // $duree = substr($titre, $pos1, $pos2-$pos1+1);
                     // $titre = substr($titre, 7, $pos1-8);
 
-                    //methode 2 plus court
-                    $pos1 = strpos($titre, "(");
+                    //methode 2 plus court dans le labo4
+                   /*  $pos1 = strpos($titre, "(");
                     $duree = substr($titre, $pos1);
-                    $titre = substr($titre, 7, $pos1-7);
+                    $titre = substr($titre, 7, $pos1-7); */
 
                 
                    
 
                     ?>
                     <div class="carte">
-                        <h4><?php echo $sigle;?></h4>
+                      
 
-                        <h3><?php echo $titre; ?> <?php echo $duree;?></h3>
-                        <p><?php echo wp_trim_words(get_the_content(),30); ?></p>
+                        <h3><?php echo $titre; ?></h3>
+                        <p><?php echo wp_trim_words(get_the_content(),10); ?></p>
                         </div>
                     <?php endwhile;?>
                  <?php endif; ?>

@@ -525,6 +525,7 @@ Feuille de style du menu principal
   .menu-principal-container .menu {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
   }
 }
