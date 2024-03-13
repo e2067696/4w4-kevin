@@ -8,7 +8,32 @@
 
 ### Catégorie de voyage 
 #### Grandeur du Groupe 
-- DDDD
+- Voyage en groupe
+- Voyage en petit comité
+- Voyage en solo
+#### Type de voyage
+- Aventure
+- Culturel
+- Repos
+- Intime
+- Sportif
+- Économique
+- Luxueux
+- Paysage
+- Pleine nature
+
+### Améliorer notre thème en ajoutant:
+- Un pied de page
+- Un design de thème amélioré avec Sass et PHP
+- Amélioration de l'affichage produit par les modèles:
+  - front-page.php
+  -	single.php
+  -	category.php
+  -	search.php
+  -	header.php
+  -	footer.php
+-	Une mise en page entièrement adaptative
+
 
 ### Barème de correction
 
