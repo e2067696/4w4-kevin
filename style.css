@@ -90,7 +90,6 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .global > section,
@@ -103,9 +102,13 @@ body {
   background-color: rgba(255, 255, 255, var(--tranparent-section));
 }
 
+.global > .entete_header {
+  flex: 1;
+}
+
 #menu_entete {
+  position: relative;
   background-color: var(--couleur-arriere-menu);
-  min-height: 10vh;
 }
 
 #entete, #footer {
@@ -224,6 +227,17 @@ body {
   padding: 1rem;
   margin: 1rem 0;
   border-left: 5px solid var(--couleur-arriere-footer);
+}
+
+img.custom-logo {
+  width: 70px;
+  height: 70px;
+}
+@media (min-width: 700px) {
+  img.custom-logo {
+    width: clamp(45px, 10vw, 150px);
+    height: clamp(45px, 10vw, 150px);
+  }
 }
 
 @media (max-width: 768px) {
