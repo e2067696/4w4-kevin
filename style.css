@@ -39,8 +39,6 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   /* la luminosité */
   --l-arriere: 50%;
   --l-avant: 10%;
-  /* couleur arrière plan - background-color */
-  /* couleur avant plan - color */
   --couleur-arriere-entete: hsl(var(--u1), 100%, 70%);
   --couleur-arriere-menu: hsl(var(--u1), 100%, 30%);
   --couleur-arriere-accueil: hsl(var(--u1), 100%, 75%);
